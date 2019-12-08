@@ -20,7 +20,10 @@ class App extends Component {
         id: 1,
         titulo: "Campaña Publicitaria Argentina Game Show",
         URL: null,
-        preview: "01.jpg"
+        preview: "01.jpg",
+        background: "negro",
+        color: "blanco",
+        screenshot: ["0101.jpg", "0102.jpg", "0103.jpg", "0104.jpg"]
       },
       {
         id: 2,
