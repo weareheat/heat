@@ -3,12 +3,17 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 import Navbar from "../components/commons/Navbar";
 import Preview from "../components/index/Preview";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import Proyecto from "../components/proyectos/Proyecto";
+import Footer from "../components/commons/Footer";
 
 export default class index extends Component {
   state = {
     navbarStatus: 0, // 0 inicial, 1 mostrar, 2 ocultar
-    isTop: false
+    isTop: false,
+    cantPreview: 6,
+    animacionPlus: ""
   };
 
   myRef = React.createRef();
@@ -25,12 +30,24 @@ export default class index extends Component {
   componentDidMount = () => {
     window.addEventListener("scroll", () => {
       if (window.scrollY == 0) {
-        //user is at the top of the page; no need to show the back to top button
         this.setState({ navbarStatus: 2 });
-        console.log("top");
-      } else {
       }
     });
+  };
+
+  sumaPreview = () => {
+    const newCantPreview = this.state.cantPreview + 6;
+    if (this.props.proyectos.length <= newCantPreview) {
+      this.setState({ cantPreview: newCantPreview });
+    } else {
+      this.setState({ cantPreview: this.props.proyectos.length });
+    }
+  };
+
+  animaPlus = animacion => {
+    console.log(animacion);
+    if (animacion) this.setState({ animacionPlus: "animacionIn" });
+    else this.setState({ animacionPlus: "animacionOut" });
   };
 
   render() {
@@ -63,8 +80,12 @@ export default class index extends Component {
                         paddingRight: "4.5rem"
                       }}
                     >
-                      <a className="px-2">Reel</a>
-                      <a className="px-2">Proyectos</a>
+                      <span className="link px-2">
+                        <Link to="/reel">Reel</Link>
+                      </span>
+                      <span className="link px-2">
+                        <Link to="/proyectos">Proyectos</Link>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -84,20 +105,71 @@ export default class index extends Component {
             style={{ background: "grey", top: "-99px", position: "absolute" }}
           ></div>
           <div className="row">
-            {this.props.proyectos.map(
-              proyecto => (
+            {this.props.proyectos.map((proyecto, index) =>
+              index < this.state.cantPreview ? (
                 <Preview proyecto={proyecto}></Preview>
-              )
-              //console.log(proyecto)
+              ) : null
             )}
           </div>
         </div>
+
+        <div className="masPreview">
+          <div
+            className={`circulo ${this.state.animacionPlus}`}
+            onMouseEnter={() => this.animaPlus(true)}
+            onMouseLeave={() => this.animaPlus(false)}
+            onClick={() => this.sumaPreview()}
+          >
+            <div className="mas-simbolo">
+              <FontAwesomeIcon icon={faPlus} />
+            </div>
+          </div>
+        </div>
+        <Footer bkg={"#EE4165"} color={`black`}></Footer>
         <style jsx>
           {`
             .header-img {
               position: relative;
               width: 100%;
               z-index: 0;
+            }
+            .circulo {
+              border: 4px solid #fff;
+              width: 100px;
+              height: 100px;
+              border-radius: 100%;
+              position: relative;
+              margin: 4px;
+              display: inline-block;
+              vertical-align: middle;
+              justify-content: center;
+              display: flex;
+              align-items: center;
+              cursor: pointer;
+            }
+            .animacionIn {
+              -webkit-animation-name: izquierda; /* Safari 4.0 - 8.0 */
+              -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+              animation-name: izquierda;
+              animation-duration: 1s;
+              animation-fill-mode: forwards;
+            }
+            .animacionOut {
+              -webkit-animation-name: derecha; /* Safari 4.0 - 8.0 */
+              -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+              animation-name: derecha;
+              animation-duration: 1s;
+              animation-fill-mode: forwards;
+            }
+            @keyframes izquierda {
+              to {
+                transform: rotate(180deg);
+              }
+            }
+            @keyframes derecha {
+              to {
+                transform: rotate(-180deg);
+              }
             }
             .header-navbar {
               position: absolute;
@@ -112,6 +184,22 @@ export default class index extends Component {
             .stop-scrolling {
               height: 100%;
               overflow: hidden;
+            }
+            .link a {
+              font-family: "Montserrat";
+              font-weight: bold;
+              color: black;
+            }
+            .masPreview {
+              height: 500px;
+              background: black;
+              color: white;
+              justify-content: center;
+              display: flex;
+              align-items: center;
+            }
+            .mas-simbolo {
+              font-size: 4em;
             }
           `}
         </style>

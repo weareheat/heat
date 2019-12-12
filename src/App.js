@@ -4,9 +4,10 @@ import logo from "./logo.svg";
 import Index from "./pages/index";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
-import Navbar from "./components/commons/Navbar";
 import "./App.css";
 import Proyecto from "./components/proyectos/Proyecto";
+import Reel from "./components/index/Reel";
+import Proyectos from "./components/index/Proyectos";
 
 class App extends Component {
   componentDidMount = () => {
@@ -196,11 +197,16 @@ class App extends Component {
       <React.Fragment>
         <BrowserRouter>
           <Switch>
-            <Route path="/" render={() => <Index proyectos={proyectos} />} />
             <Route
-              path="/proyecto"
-              render={() => <Proyecto proyectos={proyectos} />}
+              exact
+              path="/"
+              render={() => <Index proyectos={proyectos} />}
             />
+            <Route
+              path="/proyectos"
+              render={() => <Proyectos proyectos={proyectos} />}
+            />
+            <Route path="/reel" render={() => <Reel />} />
           </Switch>
         </BrowserRouter>
       </React.Fragment>

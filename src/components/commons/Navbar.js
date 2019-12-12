@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 export default class Navbar extends Component {
   setNavbarStatus = () => {
@@ -33,15 +34,11 @@ export default class Navbar extends Component {
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ml-auto mr-5">
-            <li className="nav-item active">
-              <a className="nav-link" href="#">
-                Reel <span className="sr-only">(current)</span>
-              </a>
+            <li className="nav-item px-2">
+              <Link to="/reel">Reel</Link>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Proyectos
-              </a>
+            <li className="nav-item px-2">
+              <Link to="/proyectos">Proyectos</Link>
             </li>
           </ul>
         </div>
@@ -50,15 +47,17 @@ export default class Navbar extends Component {
           {`
             .navbar {
               background: black;
-              color: white;
               height: 100px;
-              font-family: "Montserrat";
-              font-weight: bold;
             }
             .inicial {
               display: none;
             }
             .nav-link {
+              color: white;
+            }
+            .nav-item a {
+              font-family: "Montserrat";
+              font-weight: bold;
               color: white;
             }
             .mostrar {
