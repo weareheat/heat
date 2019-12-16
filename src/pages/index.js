@@ -36,8 +36,9 @@ export default class index extends Component {
   };
 
   sumaPreview = () => {
+    console.log(this.props.proyectos.length <= newCantPreview);
     const newCantPreview = this.state.cantPreview + 6;
-    if (this.props.proyectos.length <= newCantPreview) {
+    if (this.props.proyectos.length >= newCantPreview) {
       this.setState({ cantPreview: newCantPreview });
     } else {
       this.setState({ cantPreview: this.props.proyectos.length });
@@ -45,7 +46,6 @@ export default class index extends Component {
   };
 
   animaPlus = animacion => {
-    console.log(animacion);
     if (animacion) this.setState({ animacionPlus: "animacionIn" });
     else this.setState({ animacionPlus: "animacionOut" });
   };
@@ -125,6 +125,23 @@ export default class index extends Component {
             </div>
           </div>
         </div>
+        <div class="parallax"></div>
+        <div className="texto">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+            congue orci non mi sollicitudin aliquam. Integer lobortis eu dolor
+            ultrices volutpat. Curabitur auctor euismod maximus. Donec sed
+            finibus urna. Sed feugiat ex eget elit bibendum, sed gravida sapien
+            malesuada. Curabitur nec convallis orci. Etiam varius id odio id
+            condimentum. Morbi malesuada rutrum velit, eu malesuada massa varius
+            eu. Donec ac nulla rutrum, rutrum nibh et, dictum ipsum. Integer
+            tempus placerat elit, vitae malesuada leo ultricies eget. Aliquam
+            accumsan lacus nec ullamcorper mollis. Mauris venenatis ullamcorper
+            ligula, et ultricies eros pellentesque tristique. Aenean in gravida
+            lorem. In hac habitasse platea dictumst. Vivamus blandit est sed
+            bibendum elementum.
+          </p>
+        </div>
         <Footer bkg={"#EE4165"} color={`black`}></Footer>
         <style jsx>
           {`
@@ -200,6 +217,31 @@ export default class index extends Component {
             }
             .mas-simbolo {
               font-size: 4em;
+            }
+            .parallax {
+              /* The image used */
+              background-image: url("img_parallax.jpg");
+
+              /* Set a specific height */
+              height: 500px;
+
+              /* Create the parallax scrolling effect */
+              background-attachment: fixed;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+            }
+            .texto {
+              background: black;
+              padding: 0;
+              outline: 3px solid white;
+              outline-offset: -1.5rem;
+              color: white;
+            }
+            .texto p {
+              padding: 3rem;
+              font-size: 1.3em;
+              margin: 0;
             }
           `}
         </style>

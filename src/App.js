@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import { BrowserRouter, Switch, Redirect, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter,
+  Switch,
+  Redirect,
+  Route,
+  Link,
+  browserHistory
+} from "react-router-dom";
 import logo from "./logo.svg";
 import Index from "./pages/index";
 import "./App.css";
@@ -12,7 +19,6 @@ import Proyectos from "./components/index/Proyectos";
 class App extends Component {
   componentDidMount = () => {
     var widthWithoutScrollbar = document.body.clientWidth;
-    console.log(widthWithoutScrollbar);
   };
 
   render() {
@@ -39,6 +45,7 @@ class App extends Component {
       {
         id: 2,
         titulo: " Mapping: Animaciones y proyección",
+        bkg: "#EE4165",
         URL: (
           <React.Fragment>
             <iframe
@@ -66,6 +73,7 @@ class App extends Component {
       {
         id: 3,
         titulo: "Infografía sobre el CX",
+        bkg: "#07ACE3",
         URL: null,
         preview: "03.jpg",
 	      screenshot: "03.png",
@@ -78,6 +86,7 @@ class App extends Component {
       {
         id: 4,
         titulo: "Ilustraciones sobre un viaje",
+        bkg: "#07ACE3",
         URL: null,
         preview: "04.jpg",
 	      screenshot:"04.png",
@@ -89,6 +98,7 @@ class App extends Component {
       {
         id: 5,
         titulo: "Dancing man",
+        bkg: "#82378A",
         URL: null,
         preview: "05.jpg",
 	      screenshot: "05_00.gif, 05_01.jpg, 05_02.jpg, 05_03.jpg, 05_04.jpg",
@@ -127,6 +137,7 @@ class App extends Component {
       {
         id: 7,
         titulo: "Avatar",
+        bkg: "#82378A",
         URL: (
           <React.Fragment>
             <iframe
@@ -154,6 +165,7 @@ class App extends Component {
       {
         id: 8,
         titulo: "Modelado 3d Gir - Invasor zim",
+        bkg: "#82378A",
         URL: (
           <React.Fragment>
             <div class="sketchfab-embed-wrapper">
@@ -206,6 +218,7 @@ class App extends Component {
       {
         id: 9,
         titulo: "Cyberpunk city",
+        bkg: "#EE4165",
         URL: (
           <React.Fragment>
             <iframe
@@ -233,6 +246,7 @@ class App extends Component {
       {
         id: 10,
         titulo: "Mujer inspeccionada",
+        bkg: "#07ACE3",
         URL: null,
         preview: "10.jpg",
 	      screenshot:"10.png",
@@ -244,6 +258,7 @@ class App extends Component {
       {
         id: 11,
         titulo: "Collage: Mujer y TV",
+        bkg: "#07ACE3",
         URL: (
           <React.Fragment>
             <iframe
@@ -327,7 +342,6 @@ class App extends Component {
       {
         id: 14,
         titulo: "Ilustracion de animales",
-        URL: null,
         preview: "14.jpg",
 	      screenshot:"14_01.png, 14_02.png, 14_03.png",
 	      background: "#07ACE3",
@@ -354,28 +368,26 @@ class App extends Component {
         text: "La empresa Axon Training nos contrato para ser parte de su nuevo lanzamiento de su plataforma de estudio virutal, realizamos el video publicitario para estrenarse el mismo día de la actualización. Además de la edición también realizamos las animaciones de las pantallas.",
         backfooter:"#EE4165",
       },
-      {
-        id: 16,
-        titulo: "Publicidad facebook - Axon Taining",
         URL: (
           <React.Fragment>
-            <iframe src="https://player.vimeo.com/video/341469751" 
-            width="640" 
-            height="360" 
-            frameborder="0" 
-            allow="autoplay; fullscreen" 
-            allowfullscreen></iframe>
-            <p><a href="https://vimeo.com/341469751">Animation video branding</a>   
-            from <a 	href="https://vimeo.com/rosmarinno">Rocio Romero</a> on <a 	href="https://vimeo.com">Vimeo</a>.</p>
-
+            <iframe
+              src="https://player.vimeo.com/video/341469751"
+              width="640"
+              height="360"
+              frameborder="0"
+              allow="autoplay; fullscreen"
+              allowfullscreen
+            ></iframe>
+            <p>
+              <a href="https://vimeo.com/341469751">Animation video branding</a>{" "}
+              from <a href="https://vimeo.com/rosmarinno">Rocio Romero</a> on{" "}
+              <a href="https://vimeo.com">Vimeo</a>.
+            </p>
           </React.Fragment>
         ),
         preview: "16.jpg",
-        screenshot:"16_01.jpg, 16_02.jpg, 16_03.jpg, 16_04.jpg ",
-        background: "#EE4165",
-        color: "blanco",
-        text:"Esta vez para Axon Training realizamos una pieza animada para publicitar la carrera de coaching ontológico en redes sociales. Se trabajo desde la grafica hasta el producto final.",
-        backfooter:"#77BC1F",
+        screenshot: ["16_01.jpg", "16_02.jpg", "16_03.jpg", "16_04.jpg"]
+>>>>>>> a83b5dfa7a4146a55cdbdc6aa2d3886b2f2878ce
       },
       {
         id: 17,
@@ -862,19 +874,22 @@ class App extends Component {
     ];
     return (
       <React.Fragment>
-        <BrowserRouter>
-          <Switch>
-            <Route
-              exact
-              path="/"
-              render={() => <Index proyectos={proyectos} />}
-            />
-            <Route
-              path="/proyectos"
-              render={() => <Proyectos proyectos={proyectos} />}
-            />
-            <Route path="/reel" render={() => <Reel />} />
-          </Switch>
+        <BrowserRouter history={browserHistory}>
+          <Route
+            exact
+            path="/"
+            render={() => <Index proyectos={proyectos} />}
+          />
+          <Route
+            path="/proyectos"
+            render={() => <Proyectos proyectos={proyectos} />}
+          />
+          <Route path="/reel" render={() => <Reel />} />
+
+          <Route
+            path="/proyecto/:idProyecto"
+            render={props => <Proyecto {...props} proyectos={proyectos} />}
+          />
         </BrowserRouter>
       </React.Fragment>
     );

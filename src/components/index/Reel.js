@@ -1,18 +1,14 @@
 import React, { Component } from "react";
+import Navbar from "../../components/commons/Navbar";
+import Footer from "../../components/commons/Footer";
 
 export default class Reel extends Component {
   render() {
     return (
-      <div
-        onWheel={event => {
-          if (event.nativeEvent.wheelDelta < 0) {
-            this.props.showingNavbar();
-            this.props.scrollear();
-          }
-        }}
-        style={{ height: "100vh", background: "grey" }}
-      >
+      <div>
+        <Navbar show={true}></Navbar>
         Hola soy el reel
+        <Footer bkg={"#77BC1F"} color={"black"}></Footer>
       </div>
     );
   }
