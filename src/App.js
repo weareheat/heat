@@ -4,7 +4,6 @@ import {
   Switch,
   Redirect,
   Route,
-  Link,
   browserHistory
 } from "react-router-dom";
 import logo from "./logo.svg";
