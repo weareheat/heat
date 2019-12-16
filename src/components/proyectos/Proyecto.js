@@ -44,7 +44,7 @@ export default class proyecto extends Component {
           <p>{proyectoActual.text}</p>
         </div>
         <div className="row">
-          {typeof proyectoActual.screenshot != "undefined" &&
+          {proyectoActual.screenshot != null &&
             proyectoActual.screenshot.map(file => (
               <Screenshot file={file}></Screenshot>
             ))}
@@ -53,8 +53,25 @@ export default class proyecto extends Component {
           <ModalHeader toggle={this.toggle}></ModalHeader>
           <ModalBody>{proyectoActual.URL}</ModalBody>
         </Modal>
+        <Footer
+          bkg={proyectoActual.background}
+          color={proyectoActual.color}
+        ></Footer>
         <style jsx>
           {`
+            .modal-body {
+              justify-content: center;
+              display: flex;
+              background: transparent;
+            }
+            .modal-content {
+              background: transparent;
+              border: none;
+            }
+            .modal-header {
+              background: transparent;
+              border-bottom: none;
+            }
             .playboton {
               font-size: 8em;
               height: 100px;

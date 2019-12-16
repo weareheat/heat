@@ -29,10 +29,10 @@ class App extends Component {
           <React.Fragment>
             <iframe
               src="https://player.vimeo.com/video/379508813"
-              width="640"
-              height="360"
               frameborder="0"
               allow="autoplay; fullscreen"
+              height="500"
+              width="900"
               allowfullscreen
             ></iframe>
           </React.Fragment>
@@ -46,11 +46,11 @@ class App extends Component {
         screenshot: [
           "01_01.jpg",
           "01_02.jpg",
-          "01_03.jpg",
-          "01_04.jpg",
-          "01_05.jpg",
-          "01_06.jpg",
-          "01_07.jpg",
+          "01_03.png",
+          "01_04.png",
+          "01_05.png",
+          "01_06.png",
+          "01_07.png",
           "01_08.jpg",
           "01_09.jpg",
           "01_10.jpg"
@@ -70,21 +70,16 @@ class App extends Component {
               allow="autoplay; fullscreen"
               allowfullscreen
             ></iframe>
-            <p>
-              <a href="https://vimeo.com/340475070">Mapping Visuals</a> from{" "}
-              <a href="https://vimeo.com/rosmarinno">Rocio Romero</a> on{" "}
-              <a href="https://vimeo.com">Vimeo</a>.
-            </p>
           </React.Fragment>
         ),
         preview: "02.jpg",
         screenshot: [
-          "02_01.png",
-          "02_02.png",
-          "02_03.png",
-          "02_04.png",
-          "02_05.png",
-          "02_06.png"
+          "02_01.PNG",
+          "02_02.PNG",
+          "02_03.PNG",
+          "02_04.PNG",
+          "02_05.PNG",
+          "02_06.PNG"
         ],
         background: "#EE4165",
         color: "black",
@@ -150,11 +145,6 @@ class App extends Component {
               allow="autoplay; fullscreen"
               allowfullscreen
             ></iframe>
-            <p>
-              <a href="https://vimeo.com/287576911">Love After Effects</a> from
-              <a href="https://vimeo.com/rosmarinno">Rocio Romero</a> on
-              <a href="https://vimeo.com">Vimeo</a>.
-            </p>
           </React.Fragment>
         ),
         preview: "06.jpg",
@@ -179,11 +169,6 @@ class App extends Component {
               allow="autoplay; fullscreen"
               allowfullscreen
             ></iframe>
-            <p>
-              <a href="https://vimeo.com/376945278">Avatar</a> from{" "}
-              <a href="https://vimeo.com/rosmarinno">Rocio Romero</a> on{" "}
-              <a href="https://vimeo.com">Vimeo</a>.
-            </p>
           </React.Fragment>
         ),
         preview: "07.jpg",
@@ -211,32 +196,6 @@ class App extends Component {
                 mozallowfullscreen="true"
                 webkitallowfullscreen="true"
               ></iframe>
-
-              <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-                <a
-                  href="https://sketchfab.com/3d-models/gir-de-invasor-zim-dda860b69eeb4028a004638844ff4dbb?utm_medium=embed&utm_source=website&utm_campaign=share-popup"
-                  target="_blank"
-                  style="font-weight: bold; color: #1CAAD9;"
-                >
-                  GIR de Invasor Zim
-                </a>
-                by{" "}
-                <a
-                  href="https://sketchfab.com/heatdesign?utm_medium=embed&utm_source=website&utm_campaign=share-popup"
-                  target="_blank"
-                  style="font-weight: bold; color: #1CAAD9;"
-                >
-                  Heat Design Agency
-                </a>
-                on{" "}
-                <a
-                  href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campaign=share-popup"
-                  target="_blank"
-                  style="font-weight: bold; color: #1CAAD9;"
-                >
-                  Sketchfab
-                </a>
-              </p>
             </div>
           </React.Fragment>
         ),
@@ -262,11 +221,6 @@ class App extends Component {
               allow="autoplay; fullscreen"
               allowfullscreen
             ></iframe>
-            <p>
-              <a href="https://vimeo.com/287546786">City - Matte Paiting</a>{" "}
-              from <a href="https://vimeo.com/rosmarinno">Rocio Romero</a> on{" "}
-              <a href="https://vimeo.com">Vimeo</a>.
-            </p>
           </React.Fragment>
         ),
         preview: "09.jpg",
@@ -304,11 +258,6 @@ class App extends Component {
               allow="autoplay; fullscreen"
               allowfullscreen
             ></iframe>
-            <p>
-              <a href="https://vimeo.com/269098343">Collage Girl Vintage</a>{" "}
-              from <a href="https://vimeo.com/rosmarinno">Rocio Romero</a> on{" "}
-              <a href="https://vimeo.com">Vimeo</a>.
-            </p>
           </React.Fragment>
         ),
         preview: "11.jpg",
@@ -337,31 +286,6 @@ class App extends Component {
                 w
                 ebkitallowfullscreen="true"
               ></iframe>
-              <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-                <a
-                  href="https://sketchfab.com/3d-models/joker-de-batman-the-animated-series-	fba57f89bf3a424197e864e6629424c4?utm_medium=embed&utm_source=website&utm_campaign=share-popup"
-                  target="_blank"
-                  style="font-weight: bold; color: #1CAAD9;"
-                >
-                  Joker de Batman The Animated Series
-                </a>
-                by{" "}
-                <a
-                  href="https://sketchfab.com/heatdesign?	utm_medium=embed&utm_source=website&utm_campaign=share-popup"
-                  target="_blank"
-                  style="font-	weight: bold; color: #1CAAD9;"
-                >
-                  Heat Design Agency
-                </a>
-                on{" "}
-                <a
-                  href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campaign=share-popup"
-                  target="_blank"
-                  style="font-weight: bold; color: #1CAAD9;"
-                >
-                  Sketchfab
-                </a>
-              </p>
             </div>
           </React.Fragment>
         ),
@@ -386,14 +310,6 @@ class App extends Component {
               allow="autoplay; fullscreen"
               allowfullscreen
             ></iframe>
-            <p>
-              <a href="https://vimeo.com/287547577">
-                Buenos Aires Rojo Sangre - Motion Graphics Fanmade
-              </a>{" "}
-              from
-              <a href="https://vimeo.com/rosmarinno">Rocio Romero</a> on{" "}
-              <a href="https://vimeo.com">Vimeo</a>.
-            </p>
           </React.Fragment>
         ),
         preview: "13.jpg",
@@ -457,11 +373,6 @@ class App extends Component {
               allow="autoplay; fullscreen"
               allowfullscreen
             ></iframe>
-            <p>
-              <a href="https://vimeo.com/341469751">Animation video branding</a>{" "}
-              from <a href="https://vimeo.com/rosmarinno">Rocio Romero</a> on{" "}
-              <a href="https://vimeo.com">Vimeo</a>.
-            </p>
           </React.Fragment>
         ),
         preview: "16.jpg",
@@ -480,13 +391,6 @@ class App extends Component {
               allow="autoplay; fullscreen"
               allowfullscreen
             ></iframe>
-            <p>
-              <a href="https://vimeo.com/376945033">
-                Personaje Atracci&oacute;n + Objetos
-              </a>{" "}
-              from <a href="https://vimeo.com/rosmarinno">Rocio Romero</a> on{" "}
-              <a href="https://vimeo.com">Vimeo</a>.
-            </p>
           </React.Fragment>
         ),
         preview: "17.jpg",
@@ -511,11 +415,6 @@ class App extends Component {
           fullscreen"
               allowfullscreen
             ></iframe>
-            <p>
-              <a href="https://vimeo.com/376946274">Publicidad Poraloid</a>
-              from <a href="https://vimeo.com/rosmarinno">Rocio Romero</a> on
-              <a href="https://vimeo.com">Vimeo</a>.
-            </p>
           </React.Fragment>
         ),
         preview: "18.jpg",
@@ -539,12 +438,6 @@ class App extends Component {
               allow="autoplay; fullscreen"
               allowfullscreen
             ></iframe>
-            <p>
-              <a href="https://vimeo.com/376947465">Publicidad de jugo heat</a>{" "}
-              from
-              <a href="https://vimeo.com/rosmarinno">Rocio Romero</a> on
-              <a href="https://vimeo.com">Vimeo</a>.
-            </p>
           </React.Fragment>
         ),
         preview: "19.jpg",
@@ -595,32 +488,6 @@ class App extends Component {
                 mozallowfullscreen="true"
                 webkitallowfullscreen="true"
               ></iframe>
-
-              <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-                <a
-                  href="https://sketchfab.com/3d-models/camaro-2dfb48ad25354b9fb4dbe2d1203d15cc?utm_medium=embed&utm_source=website&utm_campaign=share-popup"
-                  target="_blank"
-                  style="font-weight: bold; color: #1CAAD9;"
-                >
-                  Camaro
-                </a>
-                by{" "}
-                <a
-                  href="https://sketchfab.com/heatdesign?utm_medium=embed&utm_source=website&utm_campaign=share-popup"
-                  target="_blank"
-                  style="font-weight: bold; color: #1CAAD9;"
-                >
-                  Heat Design Agency
-                </a>
-                on{" "}
-                <a
-                  href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campaign=share-popup"
-                  target="_blank"
-                  style="font-weight: bold; color: #1CAAD9;"
-                >
-                  Sketchfab
-                </a>
-              </p>
             </div>
           </React.Fragment>
         ),
@@ -711,12 +578,6 @@ class App extends Component {
               allow="autoplay; fullscreen"
               allowfullscreen
             ></iframe>
-            <p>
-              <a href="https://vimeo.com/376955428">Cola de luz-radiohead</a>{" "}
-              from
-              <a href="https://vimeo.com/rosmarinno">Rocio Romero</a> on
-              <a href="https://vimeo.com">Vimeo</a>.
-            </p>
           </React.Fragment>
         ),
         preview: "27.jpg",
@@ -740,11 +601,6 @@ class App extends Component {
               allow="autoplay; fullscreen"
               allowfullscreen
             ></iframe>
-            <p>
-              <a href="https://vimeo.com/287577889">Dawn of the world</a> from
-              <a href="https://vimeo.com/rosmarinno">Rocio Romero</a> on
-              <a href="https://vimeo.com">Vimeo</a>.
-            </p>
           </React.Fragment>
         ),
         preview: "28.jpg",
@@ -768,11 +624,6 @@ class App extends Component {
               allow="autoplay; fullscreen"
               allowfullscreen
             ></iframe>
-            <p>
-              <a href="https://vimeo.com/376956093">Ojo dilatado</a> from
-              <a href="https://vimeo.com/rosmarinno">Rocio Romero</a> on
-              <a href="https://vimeo.com">Vimeo</a>.
-            </p>
           </React.Fragment>
         ),
         preview: "29.jpg",
@@ -800,32 +651,6 @@ class App extends Component {
                 mozallowfullscreen="true"
                 webkitallowfullscreen="true"
               ></iframe>
-
-              <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-                <a
-                  href="https://sketchfab.com/3d-models/camion-ad7bdf1b5b484deeaf6c3e8dd424bdb9?utm_medium=embed&utm_source=website&utm_campaign=share-popup"
-                  target="_blank"
-                  style="font-weight: bold; color: #1CAAD9;"
-                >
-                  Camión
-                </a>
-                by{" "}
-                <a
-                  href="https://sketchfab.com/heatdesign?utm_medium=embed&utm_source=website&utm_campaign=share-popup"
-                  target="_blank"
-                  style="font-weight: bold; color: #1CAAD9;"
-                >
-                  Heat Design Agency
-                </a>
-                on{" "}
-                <a
-                  href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campaign=share-popup"
-                  target="_blank"
-                  style="font-weight: bold; color: #1CAAD9;"
-                >
-                  Sketchfab
-                </a>
-              </p>
             </div>
           </React.Fragment>
         ),
@@ -992,32 +817,6 @@ class App extends Component {
                 mozallowfullscreen="true"
                 webkitallowfullscreen="true"
               ></iframe>
-
-              <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-                <a
-                  href="https://sketchfab.com/3d-models/robot-3d72204ae4024dc0b55f1bdd87b23d35?utm_medium=embed&utm_source=website&utm_campaign=share-popup"
-                  target="_blank"
-                  style="font-weight: bold; color: #1CAAD9;"
-                >
-                  Robot
-                </a>
-                by{" "}
-                <a
-                  href="https://sketchfab.com/heatdesign?utm_medium=embed&utm_source=website&utm_campaign=share-popup"
-                  target="_blank"
-                  style="font-weight: bold; color: #1CAAD9;"
-                >
-                  Heat Design Agency
-                </a>
-                on{" "}
-                <a
-                  href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campaign=share-popup"
-                  target="_blank"
-                  style="font-weight: bold; color: #1CAAD9;"
-                >
-                  Sketchfab
-                </a>
-              </p>
             </div>
           </React.Fragment>
         ),
