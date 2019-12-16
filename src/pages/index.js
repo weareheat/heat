@@ -36,7 +36,6 @@ export default class index extends Component {
   };
 
   sumaPreview = () => {
-    console.log(this.props.proyectos.length <= newCantPreview);
     const newCantPreview = this.state.cantPreview + 6;
     if (this.props.proyectos.length >= newCantPreview) {
       this.setState({ cantPreview: newCantPreview });

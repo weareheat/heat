@@ -7,7 +7,6 @@ export default class Screenshot extends Component {
   };
 
   toggle = () => {
-    console.log("asdasd");
     this.setState({ modal: !this.state.modal });
   };
   render() {

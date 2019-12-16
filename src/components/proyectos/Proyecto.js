@@ -2,8 +2,17 @@ import React, { Component } from "react";
 import Navbar from "../../components/commons/Navbar";
 import Footer from "../../components/commons/Footer";
 import Screenshot from "../commons/Screenshot";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlayCircle } from "@fortawesome/free-regular-svg-icons";
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
 export default class proyecto extends Component {
+  state = {
+    modal: false
+  };
+  toggle = () => {
+    this.setState({ modal: !this.state.modal });
+  };
   render() {
     let proyectoActual = this.props.proyectos.filter(
       proyecto => proyecto.id == this.props.match.params.idProyecto
@@ -19,6 +28,11 @@ export default class proyecto extends Component {
             className=""
             src={`/img/portadas/${proyectoActual.preview}`}
           ></img>
+          {proyectoActual.URL != null ? (
+            <span className="playboton" onClick={() => this.toggle()}>
+              <FontAwesomeIcon icon={faPlayCircle} />
+            </span>
+          ) : null}
           <div className="descripcion px-3">
             <hr align="left" className="separador-corto" />
             <h2>{proyectoActual.titulo}</h2>
@@ -27,29 +41,34 @@ export default class proyecto extends Component {
           </div>
         </div>
         <div className="texto">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-            congue orci non mi sollicitudin aliquam. Integer lobortis eu dolor
-            ultrices volutpat. Curabitur auctor euismod maximus. Donec sed
-            finibus urna. Sed feugiat ex eget elit bibendum, sed gravida sapien
-            malesuada. Curabitur nec convallis orci. Etiam varius id odio id
-            condimentum. Morbi malesuada rutrum velit, eu malesuada massa varius
-            eu. Donec ac nulla rutrum, rutrum nibh et, dictum ipsum. Integer
-            tempus placerat elit, vitae malesuada leo ultricies eget. Aliquam
-            accumsan lacus nec ullamcorper mollis. Mauris venenatis ullamcorper
-            ligula, et ultricies eros pellentesque tristique. Aenean in gravida
-            lorem. In hac habitasse platea dictumst. Vivamus blandit est sed
-            bibendum elementum.
-          </p>
+          <p>{proyectoActual.text}</p>
         </div>
         <div className="row">
           {typeof proyectoActual.screenshot != "undefined" &&
             proyectoActual.screenshot.map(file => (
-              <Screenshot file={file} modal={proyectoActual.URL}></Screenshot>
+              <Screenshot file={file}></Screenshot>
             ))}
         </div>
+        <Modal isOpen={this.state.modal} toggle={this.toggle} size={"xl"}>
+          <ModalHeader toggle={this.toggle}></ModalHeader>
+          <ModalBody>{proyectoActual.URL}</ModalBody>
+        </Modal>
         <style jsx>
           {`
+            .playboton {
+              font-size: 8em;
+              height: 100px;
+              width: 100px;
+              position: absolute;
+              left: 50%;
+              margin-left: -50px;
+              top: 50%;
+              margin-top: -50px;
+              cursor: pointer;
+            }
+            .playboton:hover {
+              color: white;
+            }
             .portada {
               position: relative;
             }
