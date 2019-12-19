@@ -5,10 +5,14 @@ import Screenshot from "../commons/Screenshot";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlayCircle } from "@fortawesome/free-regular-svg-icons";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+import ReactPlayer from "react-player";
 
 export default class proyecto extends Component {
   state = {
     modal: false
+  };
+  componentDidMount = () => {
+    window.scrollTo({ top: 0 });
   };
   toggle = () => {
     this.setState({ modal: !this.state.modal });
@@ -18,16 +22,10 @@ export default class proyecto extends Component {
       proyecto => proyecto.id == this.props.match.params.idProyecto
     );
     proyectoActual = proyectoActual[0];
-    console.log(proyectoActual);
     return (
       <div>
         <Navbar show={true}></Navbar>
         <div className="portada">
-          <img
-            style={{ zIndex: 1 }}
-            className=""
-            src={`/img/portadas/${proyectoActual.preview}`}
-          ></img>
           {proyectoActual.URL != null ? (
             <span className="playboton" onClick={() => this.toggle()}>
               <FontAwesomeIcon icon={faPlayCircle} />
@@ -43,15 +41,32 @@ export default class proyecto extends Component {
         <div className="texto">
           <p>{proyectoActual.text}</p>
         </div>
-        <div className="row">
+        <div
+          className="row mx-0 justify-content-md-center"
+          style={{ backgroundColor: "black" }}
+        >
           {proyectoActual.screenshot != null &&
             proyectoActual.screenshot.map(file => (
-              <Screenshot file={file}></Screenshot>
+              <div className="col-md-7 py-3">
+                <Screenshot file={file}></Screenshot>
+              </div>
             ))}
         </div>
         <Modal isOpen={this.state.modal} toggle={this.toggle} size={"xl"}>
           <ModalHeader toggle={this.toggle}></ModalHeader>
-          <ModalBody>{proyectoActual.URL}</ModalBody>
+          <ModalBody>
+            {!proyectoActual.video ? (
+              <ReactPlayer
+                className="react-player"
+                url={proyectoActual.URL}
+                playing
+                width="100%"
+                height="100%"
+              />
+            ) : (
+              proyectoActual.URL
+            )}
+          </ModalBody>
         </Modal>
         <Footer
           bkg={proyectoActual.background}
@@ -63,6 +78,7 @@ export default class proyecto extends Component {
               justify-content: center;
               display: flex;
               background: transparent;
+              height: 60vh;
             }
             .modal-content {
               background: transparent;
@@ -87,7 +103,8 @@ export default class proyecto extends Component {
               color: white;
             }
             .portada {
-              position: relative;
+              height: 100vh;
+              background-image: url("/img/portadas/${proyectoActual.preview}");
             }
             .portada img {
               width: 100%;
@@ -114,7 +131,7 @@ export default class proyecto extends Component {
               color: white;
             }
             .texto p {
-              padding: 3rem;
+              padding: 6rem;
               font-size: 1.3em;
               margin: 0;
             }

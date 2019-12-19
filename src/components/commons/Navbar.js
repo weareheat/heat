@@ -40,6 +40,9 @@ export default class Navbar extends Component {
             <li className="nav-item px-2">
               <Link to="/proyectos">Proyectos</Link>
             </li>
+            <li className="nav-item px-2">
+              <Link to="/nosotros">Nosotros</Link>
+            </li>
           </ul>
         </div>
 

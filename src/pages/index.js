@@ -51,7 +51,7 @@ export default class index extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <div className="screen">
         <Navbar show={this.state.navbarStatus}></Navbar>
 
         <ReactScrollWheelHandler
@@ -62,9 +62,9 @@ export default class index extends Component {
         >
           <React.Fragment>
             <div className="header" style={{ background: "grey" }}>
-              <div className="col-lg-12">
-                <div className="header-navbar ">
-                  <div className="row mx-2">
+              <div className="">
+                <div className="header-navbar col-lg-12">
+                  <div className="row">
                     <div className="col-lg-6 pl-5">
                       <img
                         className="logo"
@@ -72,7 +72,7 @@ export default class index extends Component {
                       ></img>
                     </div>
                     <div
-                      className="col-lg-6"
+                      className="col-lg-6 "
                       style={{
                         color: "black",
                         textAlign: "end",
@@ -84,6 +84,9 @@ export default class index extends Component {
                       </span>
                       <span className="link px-2">
                         <Link to="/proyectos">Proyectos</Link>
+                      </span>
+                      <span className="link px-2">
+                        <Link to="/nosotros">Nosotros</Link>
                       </span>
                     </div>
                   </div>
@@ -103,7 +106,7 @@ export default class index extends Component {
             ref={this.myRef}
             style={{ background: "grey", top: "-99px", position: "absolute" }}
           ></div>
-          <div className="row">
+          <div className="row mx-0">
             {this.props.proyectos.map((proyecto, index) =>
               index < this.state.cantPreview ? (
                 <Preview proyecto={proyecto}></Preview>
@@ -126,20 +129,10 @@ export default class index extends Component {
         </div>
         <div class="parallax"></div>
         <div className="texto">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-            congue orci non mi sollicitudin aliquam. Integer lobortis eu dolor
-            ultrices volutpat. Curabitur auctor euismod maximus. Donec sed
-            finibus urna. Sed feugiat ex eget elit bibendum, sed gravida sapien
-            malesuada. Curabitur nec convallis orci. Etiam varius id odio id
-            condimentum. Morbi malesuada rutrum velit, eu malesuada massa varius
-            eu. Donec ac nulla rutrum, rutrum nibh et, dictum ipsum. Integer
-            tempus placerat elit, vitae malesuada leo ultricies eget. Aliquam
-            accumsan lacus nec ullamcorper mollis. Mauris venenatis ullamcorper
-            ligula, et ultricies eros pellentesque tristique. Aenean in gravida
-            lorem. In hac habitasse platea dictumst. Vivamus blandit est sed
-            bibendum elementum.
-          </p>
+          <div className="inner">
+            <hr className="separador-chico" align="left"></hr>
+            Si sigues todas las reglas, te perderás toda la diversión
+          </div>
         </div>
         <Footer bkg={"#EE4165"} color={`black`}></Footer>
         <style jsx>
@@ -217,14 +210,13 @@ export default class index extends Component {
             .mas-simbolo {
               font-size: 4em;
             }
+            .separador-chico {
+              width: 30px;
+              border-top: 2px solid white;
+            }
             .parallax {
-              /* The image used */
-              background-image: url("img_parallax.jpg");
-
-              /* Set a specific height */
+              background-image: url("/img/home/img-parallax.jpg");
               height: 500px;
-
-              /* Create the parallax scrolling effect */
               background-attachment: fixed;
               background-position: center;
               background-repeat: no-repeat;
@@ -237,14 +229,18 @@ export default class index extends Component {
               outline-offset: -1.5rem;
               color: white;
             }
-            .texto p {
-              padding: 3rem;
-              font-size: 1.3em;
+            .texto .inner {
+              padding: 6rem;
+              padding-top: 4rem;
+              font-size: 3em;
               margin: 0;
+            }
+            .screen {
+              width: 100%;
             }
           `}
         </style>
-      </React.Fragment>
+      </div>
     );
   }
 }

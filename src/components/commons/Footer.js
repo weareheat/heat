@@ -37,6 +37,7 @@ export default class Footer extends Component {
               border-top: 2px solid ${this.props.color};
             }
             .footer-main {
+              height: 15rem;
               font-size: 1.6em;
             }
             .socialNetworks {

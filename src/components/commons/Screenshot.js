@@ -11,7 +11,7 @@ export default class Screenshot extends Component {
   };
   render() {
     return (
-      <div className="col-lg-6 px-0">
+      <div className="">
         <img
           className="img"
           src={`/img/screenshots/${this.props.file}`}

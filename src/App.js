@@ -14,6 +14,7 @@ import "./App.css";
 import Proyecto from "./components/proyectos/Proyecto";
 import Reel from "./components/index/Reel";
 import Proyectos from "./components/index/Proyectos";
+import Nosotros from "./components/index/Nosotros";
 
 class App extends Component {
   componentDidMount = () => {
@@ -894,6 +895,8 @@ class App extends Component {
             render={() => <Proyectos proyectos={proyectos} />}
           />
           <Route path="/reel" render={() => <Reel />} />
+
+          <Route path="/nosotros" render={() => <Nosotros />} />
 
           <Route
             path="/proyecto/:idProyecto"

@@ -4,6 +4,7 @@ import Navbar from "../../components/commons/Navbar";
 import Footer from "../../components/commons/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import ReactPlayer from "react-player";
 
 export default class Proyectos extends Component {
   myRef = React.createRef();
