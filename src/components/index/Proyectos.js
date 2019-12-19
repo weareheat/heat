@@ -18,7 +18,7 @@ export default class Proyectos extends Component {
       <React.Fragment>
         <Navbar show={true}></Navbar>
         <div style={{ position: "relative", top: 100 }}>
-          <div className="row">
+          <div className="row mx-0">
             {this.props.proyectos.map(proyecto => (
               <Preview proyecto={proyecto}></Preview>
             ))}
