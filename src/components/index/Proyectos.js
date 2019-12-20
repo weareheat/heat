@@ -13,6 +13,10 @@ export default class Proyectos extends Component {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  componentDidMount = () => {
+    this.scrollToTop();
+  };
+
   render() {
     return (
       <React.Fragment>

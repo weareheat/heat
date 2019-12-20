@@ -69,6 +69,8 @@ export default class Nosotros extends Component {
           />
         </div>
         <div className="texto">
+          <p style={{ fontSize: "2.3rem" }}>¿QUIÉNES SOMOS?</p>
+          <hr className="separador-chico" align="left"></hr>
           <p>
             Somos un grupo de creativos que buscamos crear nuevas realidades.
             Queremos terminar con la rutina y transformar visiones. Nuestro
@@ -126,6 +128,10 @@ export default class Nosotros extends Component {
         <Footer bkg={"#07ACE3"} color={"white"} url={""}></Footer>
         <style jsx>
           {`
+            .separador-chico {
+              width: 30px;
+              border-top: 2px solid white;
+            }
             .video {
               background-color: black;
               padding-top: 100px;
