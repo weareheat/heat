@@ -113,6 +113,9 @@ export default class proyecto extends Component {
             .portada {
               height: 100vh;
               background-image: url("../img/portadas/${proyectoActual.preview}");
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: center center;
             }
             .portada img {
               width: 100%;
