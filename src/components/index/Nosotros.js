@@ -79,9 +79,9 @@ export default class Nosotros extends Component {
             inimaginables. Solamente hay que dejarse llevar por la imaginación.
           </p>
         </div>
-        <div className="personajes px-3 row">
+        <div className="personajes px-0 row">
           <div
-            className={`col-md-3 p-2 `}
+            className={`col-md-3 px-0`}
             onClick={() => this.handleOnClick(1)}
           >
             <img
@@ -90,7 +90,7 @@ export default class Nosotros extends Component {
             ></img>
           </div>
           <div
-            className={`col-md-3 p-2 `}
+            className={`col-md-3 px-0`}
             onClick={() => this.handleOnClick(2)}
           >
             <img
@@ -98,13 +98,19 @@ export default class Nosotros extends Component {
               src="/img/nosotros/koala_02.jpg"
             ></img>
           </div>
-          <div className={`col-md-3 p-2`} onClick={() => this.handleOnClick(3)}>
+          <div
+            className={`col-md-3 px-0`}
+            onClick={() => this.handleOnClick(3)}
+          >
             <img
               className={`imagen  ${this.state.img3}`}
               src="/img/nosotros/Pulpo_02.jpg"
             ></img>
           </div>
-          <div className={`col-md-3 p-2`} onClick={() => this.handleOnClick(4)}>
+          <div
+            className={`col-md-3 px-0`}
+            onClick={() => this.handleOnClick(4)}
+          >
             <img
               className={`imagen  ${this.state.img4}`}
               src="/img/nosotros/zorro_02.jpg"
@@ -143,9 +149,11 @@ export default class Nosotros extends Component {
             }
             .personajes {
               background-color: black;
+              width: 100%;
+              margin-left: 0;
             }
             .imagen {
-              width: 100%;
+              width: 95%;
               cursor: pointer;
             }
             .fondo {

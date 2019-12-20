@@ -17,9 +17,10 @@
     "react-player": "^1.14.2",
     "react-router-dom": "^5.1.2",
     "react-scripts": "0.9.5",
-    "react-scroll-wheel-handler": "^1.1.3"
+    "react-scroll-wheel-handler": "^1.1.3",
+    "reactstrap": "^8.2.0"
   },
-  "homepage": "https://niseta.github.io/heat",
+  "homepage": "https://weareheat.github.io/heat",
   "devDependencies": {},
   "scripts": {
     "start": "react-scripts start",
