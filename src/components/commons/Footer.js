@@ -20,7 +20,7 @@ export default class Footer extends Component {
               className="col-6 text-right"
               style={{ fontWeight: 900, fontSize: "1.3em" }}
             >
-              HEAT
+              HEAT!
             </div>
           </div>
           <hr className="separador"></hr>
@@ -28,18 +28,18 @@ export default class Footer extends Component {
             <div className="col-6 socialNetworks">
               <img
                 className="icono"
-                src={`img/commons/vimeo_${this.props.color}.png`}
+                src={`${this.props.url}img/commons/vimeo_${this.props.color}.png`}
               ></img>
               <img
                 className="icono"
-                src={`img/commons/ing_${this.props.color}.png`}
+                src={`${this.props.url}img/commons/ing_${this.props.color}.png`}
               ></img>
               <img
                 className="icono"
-                src={`img/commons/facebook_${this.props.color}.png`}
+                src={`${this.props.url}img/commons/facebook_${this.props.color}.png`}
               ></img>
             </div>
-            <div className="col-6 text-right">heat@mail.com</div>
+            <div className="col-6 text-right">heat.agencia@gmail.com</div>
           </div>
           <style jsx>{`
             .separador {

@@ -24,7 +24,7 @@ export default class proyecto extends Component {
     proyectoActual = proyectoActual[0];
     return (
       <div>
-        <Navbar show={true}></Navbar>
+        <Navbar show={true} url={"../"}></Navbar>
         <div className="portada">
           {proyectoActual.URL != null ? (
             <span className="playboton" onClick={() => this.toggle()}>
@@ -78,6 +78,7 @@ export default class proyecto extends Component {
         <Footer
           bkg={proyectoActual.background}
           color={proyectoActual.color}
+          url={"../"}
         ></Footer>
         <style jsx>
           {`
