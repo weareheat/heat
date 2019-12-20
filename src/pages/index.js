@@ -28,6 +28,7 @@ export default class index extends Component {
   };
 
   componentDidMount = () => {
+    window.scrollTo({ top: 0 });
     window.addEventListener("scroll", () => {
       if (window.scrollY == 0) {
         this.setState({ navbarStatus: 2 });

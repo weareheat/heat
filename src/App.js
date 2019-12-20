@@ -397,6 +397,8 @@ class App extends Component {
           </React.Fragment>
         ),
         preview: "16.jpg",
+        background: "#77BC1F",
+        color: "white",
         screenshot: ["16_01.jpg", "16_02.jpg", "16_03.jpg", "16_04.jpg"]
       },
       {
@@ -726,7 +728,7 @@ class App extends Component {
         titulo: "Descomponiendo una burger",
         URL: null,
         preview: "35.jpg",
-        screenshot: ["35.PNG"],
+        screenshot: ["35.png"],
         background: "#07ACE3",
         color: "white",
         text:
@@ -897,7 +899,7 @@ class App extends Component {
         titulo: "Juego Simon Dance",
         URL: null,
         preview: "43.jpg",
-        screenshot: null,
+        screenshot: ["43_01.jpg", "43_02.jpg"],
         background: "#F7B619",
         color: "black",
         text:
@@ -923,10 +925,11 @@ class App extends Component {
         titulo: "Web - Gotham",
         URL: null,
         preview: "45.jpg",
-        screenshot: ["45_01.jpg", " 45_02.jpg", "45_03.jpg"],
+        screenshot: ["45_01.jpg", "45_02.jpg", "45_03.jpg"],
         background: "#F7B619",
         color: "black",
-        text: null,
+        text:
+          "La empresa distribuidora de la serie Gotham, nos encargo el website del programa para Latinoamérica, brindando información como sinopsis, detalles de los protagonistas y fotografías.",
         backfooter: "#77BC1F"
       }
     ];

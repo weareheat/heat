@@ -10,7 +10,7 @@ export default class Proyectos extends Component {
   myRef = React.createRef();
 
   scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0 });
   };
 
   componentDidMount = () => {
