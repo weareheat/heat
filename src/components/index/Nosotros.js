@@ -58,7 +58,7 @@ export default class Nosotros extends Component {
   render() {
     return (
       <div>
-        <Navbar show={true}></Navbar>
+        <Navbar show={true} url={""}></Navbar>
         <div className="video">
           <ReactPlayer
             className="react-player"
@@ -123,7 +123,7 @@ export default class Nosotros extends Component {
             src={`img/nosotros/${this.state.bio}`}
           ></img>
         </div>
-        <Footer bkg={"#07ACE3"} color={"white"}></Footer>
+        <Footer bkg={"#07ACE3"} color={"white"} url={""}></Footer>
         <style jsx>
           {`
             .video {

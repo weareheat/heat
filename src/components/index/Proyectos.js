@@ -16,7 +16,7 @@ export default class Proyectos extends Component {
   render() {
     return (
       <React.Fragment>
-        <Navbar show={true}></Navbar>
+        <Navbar show={true} url={""}></Navbar>
         <div style={{ position: "relative", top: 100 }}>
           <div className="row mx-0">
             {this.props.proyectos.map(proyecto => (
@@ -30,7 +30,7 @@ export default class Proyectos extends Component {
               </div>
             </div>
           </div>
-          <Footer bkg={"orange"} color={"black"}></Footer>
+          <Footer bkg={"orange"} color={"black"} url={""}></Footer>
         </div>
         <style jsx>
           {`

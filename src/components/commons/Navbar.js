@@ -17,12 +17,14 @@ export default class Navbar extends Component {
       <nav
         className={`navbar ${this.setNavbarStatus()} navbar-expand-lg fixed-top`}
       >
-        <a className="navbar-brand ml-5" href="/">
-          <img
-            className="logo"
-            src={`${this.props.url}img/logo/Logo-blanco.png`}
-          ></img>
-        </a>
+        <Link to={`/`}>
+          <a className="navbar-brand ml-5">
+            <img
+              className="logo"
+              src={`${this.props.url}img/logo/Logo-blanco.png`}
+            ></img>
+          </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"

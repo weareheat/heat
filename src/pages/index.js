@@ -52,7 +52,7 @@ export default class index extends Component {
   render() {
     return (
       <div className="screen">
-        <Navbar show={this.state.navbarStatus}></Navbar>
+        <Navbar show={this.state.navbarStatus} url={""}></Navbar>
 
         <ReactScrollWheelHandler
           upHandler={() => this.scrollUp()}
@@ -131,7 +131,7 @@ export default class index extends Component {
             Si sigues todas las reglas, te perderás toda la diversión.
           </div>
         </div>
-        <Footer bkg={"#EE4165"} color={`black`}></Footer>
+        <Footer bkg={"#EE4165"} color={`black`} url={""}></Footer>
         <style jsx>
           {`
             .header-img {

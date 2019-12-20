@@ -7,7 +7,7 @@ export default class Reel extends Component {
   render() {
     return (
       <div style={{}}>
-        <Navbar show={true}></Navbar>
+        <Navbar show={true} url={""}></Navbar>
         <div className="video">
           <ReactPlayer
             className="react-player"
@@ -18,7 +18,7 @@ export default class Reel extends Component {
           />
         </div>
         <div className="">
-          <Footer bkg={"black"} color={"white"}></Footer>
+          <Footer bkg={"black"} color={"white"} url={""}></Footer>
         </div>
         <style jsx>
           {`
