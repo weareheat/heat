@@ -932,7 +932,7 @@ class App extends Component {
     ];
     return (
       <React.Fragment>
-        <BrowserRouter history={browserHistory}>
+        <BrowserRouter basename={window.location.pathname || ""}>
           <Route
             exact
             path="/"
