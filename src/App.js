@@ -26,7 +26,9 @@ class App extends Component {
       {
         id: 1,
         titulo: "Campaña Publicitaria Argentina Game Show",
-        URL: (
+        video: true,
+        URL: "https://player.vimeo.com/video/379508813",
+        viejoURL: (
           <React.Fragment>
             <iframe
               src="https://player.vimeo.com/video/379508813"
@@ -61,7 +63,9 @@ class App extends Component {
         id: 2,
         titulo: " Mapping: Animaciones y proyección",
         bkg: "#EE4165",
-        URL: (
+        video: true,
+        URL: "https://player.vimeo.com/video/340475070",
+        viejoURL: (
           <React.Fragment>
             <iframe
               src="https://player.vimeo.com/video/340475070"
@@ -95,6 +99,7 @@ class App extends Component {
         URL: null,
         preview: "03.jpg",
         screenshot: ["03.png"],
+        screenshotLarge: true,
         background: "#07ACE3",
         color: "white",
         text:
@@ -108,6 +113,7 @@ class App extends Component {
         URL: null,
         preview: "04.jpg",
         screenshot: ["04.png"],
+        screenshotLarge: true,
         background: "#07ACE3",
         color: "white",
         text:
@@ -136,7 +142,9 @@ class App extends Component {
       {
         id: 6,
         titulo: "After effects",
-        URL: (
+        video: true,
+        URL: "https://player.vimeo.com/video/287576911",
+        viejoURL: (
           <React.Fragment>
             <iframe
               src="https://player.vimeo.com/video/287576911"
@@ -160,7 +168,9 @@ class App extends Component {
         id: 7,
         titulo: "Avatar",
         bkg: "#82378A",
-        URL: (
+        video: true,
+        URL: "https://player.vimeo.com/video/376945278",
+        viejoURL: (
           <React.Fragment>
             <iframe
               src="https://player.vimeo.com/video/376945278"
@@ -189,8 +199,8 @@ class App extends Component {
             <div class="sketchfab-embed-wrapper">
               <iframe
                 title="A 3D model"
-                width="640"
-                height="480"
+                width="1000"
+                height="700"
                 src="https://sketchfab.com/models/dda860b69eeb4028a004638844ff4dbb/embed"
                 frameborder="0"
                 allow="autoplay; fullscreen; vr"
@@ -212,7 +222,9 @@ class App extends Component {
         id: 9,
         titulo: "Cyberpunk city",
         bkg: "#EE4165",
-        URL: (
+        URL: "https://player.vimeo.com/video/287546786",
+        video: true,
+        viejoURL: (
           <React.Fragment>
             <iframe
               src="https://player.vimeo.com/video/287546786"
@@ -249,7 +261,9 @@ class App extends Component {
         id: 11,
         titulo: "Collage: Mujer y TV",
         bkg: "#07ACE3",
-        URL: (
+        video: true,
+        URL: "https://player.vimeo.com/video/269098343",
+        viejoURL: (
           <React.Fragment>
             <iframe
               src="https://player.vimeo.com/video/269098343"
@@ -278,8 +292,8 @@ class App extends Component {
               z
               <iframe
                 title="A 3D model"
-                width="640"
-                height="480"
+                width="1000"
+                height="700"
                 src="https://sketchfab.com/models/fba57f89bf3a424197e864e6629424c4/embed"
                 frameborder="0"
                 allow="autoplay; fullscreen; vr"
@@ -301,7 +315,9 @@ class App extends Component {
       {
         id: 13,
         titulo: "Publicidad- Festival de cine BARS",
-        URL: (
+        video: true,
+        URL: "https://player.vimeo.com/video/287547577",
+        viejoURL: (
           <React.Fragment>
             <iframe
               src="https://player.vimeo.com/video/287547577"
@@ -341,7 +357,9 @@ class App extends Component {
       {
         id: 15,
         titulo: "Publicidad Nuevo Campus Axon",
-        URL: (
+        URL: "https://player.vimeo.com/video/357261212",
+        video: true,
+        viejoURL: (
           <React.Fragment>
             <iframe
               title="vimeo-player"
@@ -364,7 +382,9 @@ class App extends Component {
       {
         id: 16,
         titulo: "Publicidad facebook - Axon Taining",
-        URL: (
+        video: true,
+        URL: "https://player.vimeo.com/video/341469751",
+        viejoURL: (
           <React.Fragment>
             <iframe
               src="https://player.vimeo.com/video/341469751"
@@ -382,7 +402,9 @@ class App extends Component {
       {
         id: 17,
         titulo: "Animación: Atracción + Objetos",
-        URL: (
+        URL: "https://player.vimeo.com/video/376945033",
+        video: true,
+        viejoURL: (
           <React.Fragment>
             <iframe
               src="https://player.vimeo.com/video/376945033"
@@ -405,7 +427,9 @@ class App extends Component {
       {
         id: 18,
         titulo: "Publicidad Poraloid",
-        URL: (
+        video: true,
+        URL: "https://player.vimeo.com/video/376946274",
+        viejoURL: (
           <React.Fragment>
             <iframe
               src="https://player.vimeo.com/video/376946274"
@@ -419,7 +443,7 @@ class App extends Component {
           </React.Fragment>
         ),
         preview: "18.jpg",
-        screenshot: ["18_01.JPG", "18_02.JGP"],
+        screenshot: ["18_01.JPG", "18_02.JPG"],
         background: "#77BC1F",
         color: "white",
         text:
@@ -429,7 +453,9 @@ class App extends Component {
       {
         id: 19,
         titulo: "Publicidad de Jugo Heat",
-        URL: (
+        URL: "https://player.vimeo.com/video/376947465",
+        video: true,
+        viejoURL: (
           <React.Fragment>
             <iframe
               src="https://player.vimeo.com/video/376947465"
@@ -458,7 +484,7 @@ class App extends Component {
         background: "#F7B619",
         color: "black",
         text:
-          "Creamos para Cartoon Network el juego de su programa de televisión Tío Grandpa. Usamos su gráfica, creamos nueva y programamos el juego para los niños. Tiene 3 niveles y se pueden apreciar a todos los personajes de la serie animada. ",
+          "Creamos para Cartoon Network el juego de su programa de televisión Tío Grandpa. Usamos su gráfica, creamos nueva y programamos el juego para los niños. Tiene 3 niveles y se pueden apreciar a todos los personajes de la serie animada.",
         backfooter: "#77BC1F"
       },
       {
@@ -481,8 +507,8 @@ class App extends Component {
             <div class="sketchfab-embed-wrapper">
               <iframe
                 title="A 3D model"
-                width="640"
-                height="480"
+                width="1000"
+                height="700"
                 src="https://sketchfab.com/models/2dfb48ad25354b9fb4dbe2d1203d15cc/embed"
                 frameborder="0"
                 allow="autoplay; fullscreen; vr"
@@ -527,7 +553,9 @@ class App extends Component {
       {
         id: 26,
         titulo: "Motion - Medicina",
-        URL: (
+        URL: "https://player.vimeo.com/video/376954881",
+        video: true,
+        viejoURL: (
           <React.Fragment>
             <iframe
               src="https://player.vimeo.com/video/376954881"
@@ -560,6 +588,7 @@ class App extends Component {
         ),
         preview: "26.jpg",
         screenshot: ["26_01.JPG", "26_02.JPG", "26_03.JPG", "26_04.JPG"],
+        screenshootVideo: "https://player.vimeo.com/video/376954906",
         background: "#EE4165",
         color: "white",
         text:
@@ -569,7 +598,9 @@ class App extends Component {
       {
         id: 27,
         titulo: "Videoclip - Radiohead",
-        URL: (
+        video: true,
+        URL: "https://player.vimeo.com/video/376955428",
+        videoURL: (
           <React.Fragment>
             <iframe
               src="https://player.vimeo.com/video/376955428"
@@ -592,7 +623,9 @@ class App extends Component {
       {
         id: 28,
         titulo: "Amanecer de un mundo",
-        URL: (
+        URL: "https://player.vimeo.com/video/287577889",
+        video: true,
+        viejoURL: (
           <React.Fragment>
             <iframe
               src="https://player.vimeo.com/video/287577889"
@@ -615,7 +648,9 @@ class App extends Component {
       {
         id: 29,
         titulo: "Ojo dilatado",
-        URL: (
+        URL: "https://player.vimeo.com/video/376956093",
+        video: true,
+        viejoURL: (
           <React.Fragment>
             <iframe
               src="https://player.vimeo.com/video/376956093"
@@ -643,8 +678,8 @@ class App extends Component {
             <div class="sketchfab-embed-wrapper">
               <iframe
                 title="A 3D model"
-                width="640"
-                height="480"
+                width="1000"
+                height="700"
                 src="https://sketchfab.com/models/ad7bdf1b5b484deeaf6c3e8dd424bdb9/embed"
                 f
                 rameborder="0"
@@ -701,7 +736,9 @@ class App extends Component {
       {
         id: 36,
         titulo: "Ilustración - creación de personaje",
-        URL: (
+        URL: "https://player.vimeo.com/video/376958745",
+        video: true,
+        viejaURL: (
           <React.Fragment>
             <iframe
               src="https://player.vimeo.com/video/376958745"
@@ -764,20 +801,31 @@ class App extends Component {
       // },/
       {
         id: 39,
-        titulo: "Wakeme App",
+        titulo: "Critic.ar App",
         URL: null,
-        preview: "39.png",
-        screenshot: null,
+        preview: "39.jpg",
+        mobile: true,
+        screenshot: [
+          "39_01.jpg",
+          "39_02.jpg",
+          "39_03.jpg",
+          "39_04.jpg",
+          "39_05.jpg",
+          "39_06.jpg"
+        ],
         background: "#F7B619",
         color: "black",
-        text: null,
+        text:
+          "Esta aplicación fue un proyecto personal nuestro. Surgió en un desafío semanal y nos gusto tanto que seguimos. Su función es como un blog de peliculas, series, musica y juegos, podes armar una lista de pendientes y dejar una critica sobre eso.",
         backfooter: "#77BC1F"
       },
 
       {
         id: 40,
         titulo: "Tracking Mc Donalds",
-        URL: (
+        URL: "https://player.vimeo.com/video/379181700",
+        video: true,
+        viejaURL: (
           <React.Fragment>
             <iframe
               src="https://player.vimeo.com/video/379181700"
@@ -810,8 +858,8 @@ class App extends Component {
             <div class="sketchfab-embed-wrapper">
               <iframe
                 title="A 3D model"
-                width="640"
-                height="480"
+                width="1000"
+                height="700"
                 src="https://sketchfab.com/models/3d72204ae4024dc0b55f1bdd87b23d35/embed"
                 frameborder="0"
                 allow="autoplay; fullscreen; vr"
@@ -834,12 +882,13 @@ class App extends Component {
         id: 42,
         titulo: "Bafici App",
         URL: null,
+        mobile: true,
         preview: "42.jpg",
-        screenshot: null,
+        screenshot: ["42_01.jpg", "42_02.jpg", "42_03.jpg", "42_04.jpg"],
         background: "#F7B619",
         color: "black",
         text:
-          "El festival de cine independiente del país, BAFICI, nos pidió realizar una app para facilitar a los usuarios la grilla de películas. Separadas por categorías como sedes y días. ",
+          "El festival de cine independiente del país, BAFICI, nos pidió realizar una app para facilitar a los usuarios la grilla de películas. Separadas por categorías como sedes y días.",
         backfooter: "#77BC1F"
       },
 
@@ -852,7 +901,7 @@ class App extends Component {
         background: "#F7B619",
         color: "black",
         text:
-          "Creamos un juego para nosotros mismos con el formato de simon dice, pero con personajes haciendo pases de bailes. La estética fue creada por nosotros mismos. ",
+          "Creamos un juego para nosotros mismos con el formato de simon dice, pero con personajes haciendo pases de bailes. La estética fue creada por nosotros mismos.",
         backfooter: "#77BC1F"
       },
 
@@ -861,7 +910,7 @@ class App extends Component {
         titulo: "Web - Falling for innocence",
         URL: null,
         preview: "44.jpg",
-        screenshot: null,
+        screenshot: ["44_01.jpg", "44_02.jpg", "44_03.jpg"],
         background: "#F7B619",
         color: "black",
         text:
@@ -874,11 +923,10 @@ class App extends Component {
         titulo: "Web - Gotham",
         URL: null,
         preview: "45.jpg",
-        screenshot: null,
+        screenshot: ["45_01.jpg", " 45_02.jpg", "45_03.jpg"],
         background: "#F7B619",
         color: "black",
-        text:
-          "La empresa distribuidora de la serie Gotham, nos encargo el website del programa para Latinoamérica, brindando información como sinopsis, detalles de los protagonistas y fotografías.",
+        text: null,
         backfooter: "#77BC1F"
       }
     ];

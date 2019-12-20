@@ -131,7 +131,7 @@ export default class index extends Component {
         <div className="texto">
           <div className="inner">
             <hr className="separador-chico" align="left"></hr>
-            Si sigues todas las reglas, te perderás toda la diversión
+            Si sigues todas las reglas, te perderás toda la diversión.
           </div>
         </div>
         <Footer bkg={"#EE4165"} color={`black`}></Footer>

@@ -47,15 +47,22 @@ export default class proyecto extends Component {
         >
           {proyectoActual.screenshot != null &&
             proyectoActual.screenshot.map(file => (
-              <div className="col-md-7 py-3">
-                <Screenshot file={file}></Screenshot>
+              <div
+                className={`${
+                  proyectoActual.mobile ? "col-md-4" : "col-md-7"
+                } py-3`}
+              >
+                <Screenshot
+                  file={file}
+                  viewModal={proyectoActual.screenshotLarge}
+                ></Screenshot>
               </div>
             ))}
         </div>
         <Modal isOpen={this.state.modal} toggle={this.toggle} size={"xl"}>
           <ModalHeader toggle={this.toggle}></ModalHeader>
           <ModalBody>
-            {!proyectoActual.video ? (
+            {proyectoActual.video ? (
               <ReactPlayer
                 className="react-player"
                 url={proyectoActual.URL}
@@ -78,7 +85,7 @@ export default class proyecto extends Component {
               justify-content: center;
               display: flex;
               background: transparent;
-              height: 60vh;
+              height: 80vh;
             }
             .modal-content {
               background: transparent;

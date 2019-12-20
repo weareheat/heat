@@ -26,9 +26,18 @@ export default class Footer extends Component {
           <hr className="separador"></hr>
           <div className="row">
             <div className="col-6 socialNetworks">
-              <FontAwesomeIcon icon={faVimeoSquare} />{" "}
-              <FontAwesomeIcon icon={faFacebookSquare} />{" "}
-              <FontAwesomeIcon icon={faInstagram} />{" "}
+              <img
+                className="icono"
+                src={`/img/commons/vimeo_${this.props.color}.png`}
+              ></img>
+              <img
+                className="icono"
+                src={`/img/commons/ing_${this.props.color}.png`}
+              ></img>
+              <img
+                className="icono"
+                src={`/img/commons/facebook_${this.props.color}.png`}
+              ></img>
             </div>
             <div className="col-6 text-right">heat@mail.com</div>
           </div>
@@ -36,11 +45,17 @@ export default class Footer extends Component {
             .separador {
               border-top: 2px solid ${this.props.color};
             }
+            .icono {
+              width: 3.5rem;
+              padding-left: 0.5rem;
+              padding-right: 0.5rem;
+            }
             .footer-main {
               height: 15rem;
               font-size: 1.6em;
             }
             .socialNetworks {
+              display: flex;
               font-size: 1.7em;
             }
           `}</style>

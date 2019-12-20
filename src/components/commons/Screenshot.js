@@ -13,26 +13,30 @@ export default class Screenshot extends Component {
     return (
       <div className="">
         <img
-          className="img"
+          className="imgPreview"
           src={`/img/screenshots/${this.props.file}`}
-          onClick={() => this.toggle()}
+          onClick={this.props.viewModal ? null : () => this.toggle()}
         ></img>
         <Modal isOpen={this.state.modal} toggle={this.toggle} size={"xl"}>
           <ModalHeader toggle={this.toggle}></ModalHeader>
           <ModalBody>
             <img
-              className="img"
+              className="imgModal"
               src={`/img/screenshots/${this.props.file}`}
             ></img>
           </ModalBody>
         </Modal>
         <style jsx>
           {`
-            .img {
+            .imgPreview {
               display: block;
               width: 100%;
               height: 100%;
-              cursor: pointer;
+              ${this.props.viewModal ? null : "cursor: pointer"};
+            }
+            .imgModal {
+              height: 100%;
+              width: 100%;
             }
             .modal-content {
               background: transparent;
