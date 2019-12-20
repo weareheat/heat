@@ -28,15 +28,15 @@ export default class Footer extends Component {
             <div className="col-6 socialNetworks">
               <img
                 className="icono"
-                src={`/img/commons/vimeo_${this.props.color}.png`}
+                src={`../img/commons/vimeo_${this.props.color}.png`}
               ></img>
               <img
                 className="icono"
-                src={`/img/commons/ing_${this.props.color}.png`}
+                src={`../../img/commons/ing_${this.props.color}.png`}
               ></img>
               <img
                 className="icono"
-                src={`/img/commons/facebook_${this.props.color}.png`}
+                src={`./img/commons/facebook_${this.props.color}.png`}
               ></img>
             </div>
             <div className="col-6 text-right">heat@mail.com</div>
