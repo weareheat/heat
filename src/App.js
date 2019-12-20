@@ -124,6 +124,7 @@ class App extends Component {
         id: 5,
         titulo: "Dancing man",
         bkg: "#82378A",
+        video: true,
         URL: "https://player.vimeo.com/video/380641729",
         preview: "05.jpg",
         screenshot: [

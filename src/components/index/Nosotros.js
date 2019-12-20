@@ -59,15 +59,7 @@ export default class Nosotros extends Component {
     return (
       <div>
         <Navbar show={true} url={""}></Navbar>
-        <div className="video">
-          <ReactPlayer
-            className="react-player"
-            url="https://player.vimeo.com/video/379159470"
-            //playing
-            width="100%"
-            height="100%"
-          />
-        </div>
+        <div className="portada"></div>
         <div className="texto">
           <p className="mb-0 pb-0" style={{ fontSize: "2.3rem" }}>
             ¿QUIÉNES SOMOS?
@@ -134,6 +126,13 @@ export default class Nosotros extends Component {
               width: 30px;
               border-top: 2px solid white;
               margin-left: 6rem;
+            }
+            .portada {
+              height: 100vh;
+              background-image: url("../img/nosotros/manifiesto.png");
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: center center;
             }
             .video {
               background-color: black;
