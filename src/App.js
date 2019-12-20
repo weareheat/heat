@@ -1,12 +1,5 @@
 import React, { Component } from "react";
-import {
-  BrowserRouter,
-  Switch,
-  Redirect,
-  Route,
-  browserHistory
-} from "react-router-dom";
-import logo from "./logo.svg";
+import { BrowserRouter, Route, browserHistory } from "react-router-dom";
 import Index from "./pages/index";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
@@ -17,9 +10,7 @@ import Proyectos from "./components/index/Proyectos";
 import Nosotros from "./components/index/Nosotros";
 
 class App extends Component {
-  componentDidMount = () => {
-    var widthWithoutScrollbar = document.body.clientWidth;
-  };
+  componentDidMount = () => {};
 
   render() {
     const proyectos = [

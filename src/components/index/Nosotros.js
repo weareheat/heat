@@ -129,7 +129,7 @@ export default class Nosotros extends Component {
             }
             .portada {
               height: 100vh;
-              background-image: url("../img/nosotros/manifiesto.png");
+              background-image: url("img/nosotros/manifiesto.png");
               background-repeat: no-repeat;
               background-size: cover;
               background-position: center center;
