@@ -69,11 +69,11 @@ export default class Nosotros extends Component {
           />
         </div>
         <div className="texto">
-          <p className="mb-0" style={{ fontSize: "2.3rem" }}>
+          <p className="mb-0 pb-0" style={{ fontSize: "2.3rem" }}>
             ¿QUIÉNES SOMOS?
           </p>
           <hr className="separador-chico" align="left"></hr>
-          <p className="mt-0">
+          <p className="mt-0 pt-0">
             Somos un grupo de creativos que buscamos crear nuevas realidades.
             Queremos terminar con la rutina y transformar visiones. Nuestro
             principal objetivo es llevar las experiencias a un nuevo nivel. Y

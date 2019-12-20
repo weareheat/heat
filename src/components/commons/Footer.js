@@ -38,10 +38,12 @@ export default class Footer extends Component {
                   src={`${this.props.url}img/commons/ing_${this.props.color}.png`}
                 ></img>
               </a>
-              <img
-                className="icono"
-                src={`${this.props.url}img/commons/facebook_${this.props.color}.png`}
-              ></img>
+              <a>
+                <img
+                  className="icono"
+                  src={`${this.props.url}img/commons/facebook_${this.props.color}.png`}
+                ></img>
+              </a>
             </div>
             <div className="col-6 text-right">heat.agencia@gmail.com</div>
           </div>
