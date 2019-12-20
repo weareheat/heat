@@ -86,7 +86,7 @@ export default class Nosotros extends Component {
           >
             <img
               className={`imagen  ${this.state.img1}`}
-              src="/img/nosotros/elefante_02.jpg"
+              src="img/nosotros/elefante_02.jpg"
             ></img>
           </div>
           <div
@@ -95,7 +95,7 @@ export default class Nosotros extends Component {
           >
             <img
               className={`imagen  ${this.state.img2}`}
-              src="/img/nosotros/koala_02.jpg"
+              src="img/nosotros/koala_02.jpg"
             ></img>
           </div>
           <div
@@ -104,7 +104,7 @@ export default class Nosotros extends Component {
           >
             <img
               className={`imagen  ${this.state.img3}`}
-              src="/img/nosotros/Pulpo_02.jpg"
+              src="img/nosotros/Pulpo_02.jpg"
             ></img>
           </div>
           <div
@@ -113,14 +113,14 @@ export default class Nosotros extends Component {
           >
             <img
               className={`imagen  ${this.state.img4}`}
-              src="/img/nosotros/zorro_02.jpg"
+              src="img/nosotros/zorro_02.jpg"
             ></img>
           </div>
         </div>
         <div className="fondo" ref={this.myRef}>
           <img
             className="descripcion"
-            src={`/img/nosotros/${this.state.bio}`}
+            src={`img/nosotros/${this.state.bio}`}
           ></img>
         </div>
         <Footer bkg={"#07ACE3"} color={"white"}></Footer>

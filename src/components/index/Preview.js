@@ -13,7 +13,7 @@ export default class Preview extends Component {
             <img
               style={{ zIndex: 1 }}
               className=""
-              src={`/img/portadas/${proyecto.preview}`}
+              src={`img/portadas/${proyecto.preview}`}
             ></img>
           </div>
           <style jsx>{`

@@ -18,7 +18,7 @@ export default class Navbar extends Component {
         className={`navbar ${this.setNavbarStatus()} navbar-expand-lg fixed-top`}
       >
         <a className="navbar-brand ml-5" href="/">
-          <img className="logo" src="/img/logo/Logo-blanco.png"></img>
+          <img className="logo" src="img/logo/Logo-blanco.png"></img>
         </a>
         <button
           className="navbar-toggler"

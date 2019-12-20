@@ -66,10 +66,7 @@ export default class index extends Component {
                 <div className="header-navbar col-lg-12">
                   <div className="row">
                     <div className="col-lg-6 pl-5">
-                      <img
-                        className="logo"
-                        src="/img/logo/Logo-negro.png"
-                      ></img>
+                      <img className="logo" src="img/logo/Logo-negro.png"></img>
                     </div>
                     <div
                       className="col-lg-6 "
@@ -94,7 +91,7 @@ export default class index extends Component {
               </div>
               <img
                 className="header-img"
-                src="/img/home/header.gif"
+                src="img/home/header.gif"
                 alt=""
               ></img>
             </div>
@@ -215,7 +212,7 @@ export default class index extends Component {
               border-top: 2px solid white;
             }
             .parallax {
-              background-image: url("/img/home/img-parallax.jpg");
+              background-image: url("img/home/img-parallax.jpg");
               height: 500px;
               background-attachment: fixed;
               background-position: center;
