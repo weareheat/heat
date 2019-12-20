@@ -14,7 +14,7 @@ export default class Screenshot extends Component {
       <div className="">
         <img
           className="imgPreview"
-          src={`img/screenshots/${this.props.file}`}
+          src={`../img/screenshots/${this.props.file}`}
           onClick={this.props.viewModal ? null : () => this.toggle()}
         ></img>
         <Modal isOpen={this.state.modal} toggle={this.toggle} size={"xl"}>
@@ -22,7 +22,7 @@ export default class Screenshot extends Component {
           <ModalBody>
             <img
               className="imgModal"
-              src={`img/screenshots/${this.props.file}`}
+              src={`../img/screenshots/${this.props.file}`}
             ></img>
           </ModalBody>
         </Modal>
