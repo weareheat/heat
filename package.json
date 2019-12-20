@@ -19,7 +19,7 @@
     "react-scripts": "0.9.5",
     "react-scroll-wheel-handler": "^1.1.3"
   },
-  "homepage": "https://weareheat.github.io/heat",
+  "homepage": "https://niseta.github.io/heat",
   "devDependencies": {},
   "scripts": {
     "start": "react-scripts start",
