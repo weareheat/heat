@@ -59,7 +59,15 @@ export default class Nosotros extends Component {
     return (
       <div>
         <Navbar show={true} url={""}></Navbar>
-        <div className="portada"></div>
+       <div className="video">
+        <ReactPlayer
+            className="react-player"
+            url="https://player.vimeo.com/video/380748881"
+            playing
+            width="100%"
+            height="100%"
+          />
+    </div>
         <div className="texto">
           <p
             className="mb-0 pb-0"
