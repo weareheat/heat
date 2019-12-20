@@ -481,7 +481,8 @@ class App extends Component {
       {
         id: 20,
         titulo: "Juego Tio Grandpa",
-        URL: null,
+        video: true,
+        URL: "https://player.vimeo.com/video/380642868",
         preview: "20.jpg",
         screenshot: null,
         background: "#F7B619",
