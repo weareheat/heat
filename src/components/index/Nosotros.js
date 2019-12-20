@@ -69,9 +69,11 @@ export default class Nosotros extends Component {
           />
         </div>
         <div className="texto">
-          <p style={{ fontSize: "2.3rem" }}>¿QUIÉNES SOMOS?</p>
+          <p className="mb-0" style={{ fontSize: "2.3rem" }}>
+            ¿QUIÉNES SOMOS?
+          </p>
           <hr className="separador-chico" align="left"></hr>
-          <p>
+          <p className="mt-0">
             Somos un grupo de creativos que buscamos crear nuevas realidades.
             Queremos terminar con la rutina y transformar visiones. Nuestro
             principal objetivo es llevar las experiencias a un nuevo nivel. Y
@@ -131,6 +133,7 @@ export default class Nosotros extends Component {
             .separador-chico {
               width: 30px;
               border-top: 2px solid white;
+              margin-left: 6rem;
             }
             .video {
               background-color: black;
@@ -163,7 +166,7 @@ export default class Nosotros extends Component {
               cursor: pointer;
             }
             .fondo {
-              background-image: url(/img/nosotros/Fondo.jpg);
+              background-image: url(img/nosotros/Fondo.jpg);
             }
             .descripcion {
               width: 100%;
@@ -174,7 +177,6 @@ export default class Nosotros extends Component {
               transition-duration: 1s;
               filter: saturate(1) !important;
             }
-
             .no-seleccionado {
               transition-property: -moz-filter, -ms-filter, -o-filter,
                 -webkit-filter, filter;

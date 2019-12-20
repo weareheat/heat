@@ -26,14 +26,18 @@ export default class Footer extends Component {
           <hr className="separador"></hr>
           <div className="row">
             <div className="col-6 socialNetworks">
-              <img
-                className="icono"
-                src={`${this.props.url}img/commons/vimeo_${this.props.color}.png`}
-              ></img>
-              <img
-                className="icono"
-                src={`${this.props.url}img/commons/ing_${this.props.color}.png`}
-              ></img>
+              <a href="https://vimeo.com/heatagencia">
+                <img
+                  className="icono"
+                  src={`${this.props.url}img/commons/vimeo_${this.props.color}.png`}
+                ></img>
+              </a>
+              <a href="https://www.instagram.com/we.are.heat/">
+                <img
+                  className="icono"
+                  src={`${this.props.url}img/commons/ing_${this.props.color}.png`}
+                ></img>
+              </a>
               <img
                 className="icono"
                 src={`${this.props.url}img/commons/facebook_${this.props.color}.png`}
