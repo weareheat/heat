@@ -35,8 +35,7 @@ export default class Screenshot extends Component {
               ${this.props.viewModal ? null : "cursor: pointer"};
             }
             .imgModal {
-              max-height: 100%;
-              max-width: 100%;
+              width: 100%;
             }
             .modal-content {
               background: transparent;

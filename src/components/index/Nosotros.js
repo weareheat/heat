@@ -61,7 +61,10 @@ export default class Nosotros extends Component {
         <Navbar show={true} url={""}></Navbar>
         <div className="portada"></div>
         <div className="texto">
-          <p className="mb-0 pb-0" style={{ fontSize: "2.3rem" }}>
+          <p
+            className="mb-0 pb-0"
+            style={{ fontSize: "2.3rem", fontWeight: "bold" }}
+          >
             ¿QUIÉNES SOMOS?
           </p>
           <hr className="separador-chico" align="left"></hr>
@@ -166,6 +169,9 @@ export default class Nosotros extends Component {
             }
             .fondo {
               background-image: url(img/nosotros/Fondo.jpg);
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: center center;
             }
             .descripcion {
               width: 100%;
